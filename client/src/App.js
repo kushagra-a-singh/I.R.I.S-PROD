@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import { BrowserRouter as Router } from 'react-router-dom';
 import styles from './pages/Contact.module.css';
-import backgroundVideo from './pages/vid2.mp4';
+// import backgroundVideo from './pages/vid2.mp4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AppRouter from './Router.js';
@@ -20,6 +20,8 @@ function App() {
     </Router>
   );
 }
+
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -97,11 +99,14 @@ function Contact() {
     setShowNotification(false);
   };
 
+  const [link, setLink] = useState("https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/vid2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3ZpZDIubXA0IiwiaWF0IjoxNzI5MzU5NDI1LCJleHAiOjE3NjA4OTU0MjV9.zDVElXE2k7_Hrz-KRJGieH1K3_J_LO_9Slu6L3VNzmE&t=2024-10-19T17%3A37%3A05.403Z")
+
+
   return (
     <div className={styles.contact}>
       <div className={styles.videoBackground}>
         <video autoPlay muted loop>
-          <source src={backgroundVideo} type="video/mp4" />
+          <source src={link} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

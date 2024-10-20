@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from '../supabase';
 import styles from './Contact.module.css';
-import backgroundVideo from './vid2.mp4';
+// import backgroundVideo from './vid2.mp4';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -15,6 +15,9 @@ function Contact() {
   });
   const [showNotification, setShowNotification] = useState(false);
   const formRef = useRef(null);
+
+  const [backgroundVideo, setLink] = useState("https://vibgvvzzunbfcqwcjfbk.supabase.co/storage/v1/object/sign/IRIS%20Stuff/vid2.mp4?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJJUklTIFN0dWZmL3ZpZDIubXA0IiwiaWF0IjoxNzI5MzU5NDI1LCJleHAiOjE3NjA4OTU0MjV9.zDVElXE2k7_Hrz-KRJGieH1K3_J_LO_9Slu6L3VNzmE&t=2024-10-19T17%3A37%3A05.403Z")
+
 
   useEffect(() => {
     console.log('Checking Supabase connection...');
